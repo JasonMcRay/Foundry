@@ -18,7 +18,7 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-def mod_version = "2.2.2.0"
+def mod_version = "2.2.2.1 - Customized InfiTech Edition"
 
 def mc_version = "1.10.2"
 
@@ -46,7 +46,7 @@ repositories {
 
 dependencies {
     //compile name: 'MineTweaker3', version: 'Dev-1.8-3.0.10', ext: 'jar'
-    deobfCompile "mezz.jei:jei_1.10.2:3.13.3.373"
+    deobfCompile "mezz.jei:jei_1.10.2:3.13.4.384"
     compile "net.darkhax.tesla:Tesla:1.10.2-1.2.1.49"
 }
 

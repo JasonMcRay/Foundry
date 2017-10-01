@@ -113,45 +113,45 @@ public class ModIntegrationEnderIO implements IModIntegration
     }
     ItemStack silicon = getItemStack("itemMaterial",0);
     
-    Fluid liquid_redstone = FluidRegistry.getFluid("liquidredstone");
+    Fluid liquid_redstone = FluidRegistry.getFluid("molten.redstone");
     Fluid liquid_enderpearl = FluidRegistry.getFluid("liquidenderpearl");
-    Fluid liquid_glowstone = FluidRegistry.getFluid("liquidglowstone");
+    Fluid liquid_glowstone = FluidRegistry.getFluid("molten.glowstone");
 
     if(silicon != null)
     {
       InfuserRecipeManager.instance.addRecipe(
-          new FluidStack(liquid_redstone_alloy,108),
-          new FluidStack(liquid_redstone,100),
+          new FluidStack(liquid_redstone_alloy,144),
+          new FluidStack(liquid_redstone,144),
           new ItemStackMatcher(silicon),
           50000);
 
       InfuserRecipeManager.instance.addRecipe(
-          new FluidStack(liquid_electrical_steel,108),
-          new FluidStack(FoundryFluids.liquid_steel,108),
+          new FluidStack(liquid_electrical_steel,144),
+          new FluidStack(FoundryFluids.liquid_steel,144),
           new ItemStackMatcher(silicon),
           30000);
     }
 
     
     AlloyMixerRecipeManager.instance.addRecipe(
-        new FluidStack(liquid_energetic_alloy, 54),
+        new FluidStack(liquid_energetic_alloy, 1),
         new FluidStack[] {
-          new FluidStack(FoundryFluids.liquid_gold, 54),
-          new FluidStack(liquid_redstone, 50),
-          new FluidStack(liquid_glowstone, 125)
+          new FluidStack(FoundryFluids.liquid_gold, 1),
+          new FluidStack(liquid_redstone, 1),
+          new FluidStack(liquid_glowstone, 1)
         });
 
     AlloyMixerRecipeManager.instance.addRecipe(
-        new FluidStack(liquid_vibrant_alloy, 54),
+        new FluidStack(liquid_vibrant_alloy, 72),
         new FluidStack[] {
-          new FluidStack(liquid_energetic_alloy, 54),
+          new FluidStack(liquid_energetic_alloy, 72),
           new FluidStack(liquid_enderpearl, 125)
         });
 
     AlloyMixerRecipeManager.instance.addRecipe(
-        new FluidStack(liquid_phased_iron, 54),
+        new FluidStack(liquid_phased_iron, 72),
         new FluidStack[] {
-          new FluidStack(FoundryFluids.liquid_iron, 54),
+          new FluidStack(FoundryFluids.liquid_iron, 72),
           new FluidStack(liquid_enderpearl, 125)
         });
 

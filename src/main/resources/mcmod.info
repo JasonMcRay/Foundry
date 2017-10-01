@@ -2,10 +2,11 @@
 {
   "modid" : "foundry",
   "name" : "Foundry",
-  "version" : "2.2.2.0",
-  "credits" : "",
+  "version" : "2.2.2.0 - Customized InfiTech Edition",
+  "credits" : "To EXTER for making this mod",
   "authors": [
     "EXTER"
+    "JasonMcRay"
   ],
   "description": "Liquid Metals",
   "url" : "https://github.com/EXTER7/Foundry",

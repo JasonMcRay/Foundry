@@ -22,12 +22,12 @@ import net.minecraftforge.common.capabilities.CapabilityInject;
  */
 public class FoundryAPI
 {
-  static public final int FLUID_AMOUNT_BLOCK = 972;
-  static public final int FLUID_AMOUNT_INGOT = 108;
-  static public final int FLUID_AMOUNT_PLATE = 108;
-  static public final int FLUID_AMOUNT_ROD = 54;
-  static public final int FLUID_AMOUNT_NUGGET = 12;
-  static public final int FLUID_AMOUNT_ORE = 216;
+  static public final int FLUID_AMOUNT_BLOCK = 1296;
+  static public final int FLUID_AMOUNT_INGOT = 144;
+  static public final int FLUID_AMOUNT_PLATE = 144;
+  static public final int FLUID_AMOUNT_ROD = 72;
+  static public final int FLUID_AMOUNT_NUGGET = 16;
+  static public final int FLUID_AMOUNT_ORE = 288;
 
   /**
    * Tank capacity for machines.

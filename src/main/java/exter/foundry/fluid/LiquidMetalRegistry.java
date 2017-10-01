@@ -36,7 +36,7 @@ public class LiquidMetalRegistry implements IFluidRegistry
    */
   public FluidLiquidMetal registerLiquidMetal(String metal_name,int temperature,int luminosity)
   {
-    return registerLiquidMetal(metal_name,temperature,luminosity,"liquid" + metal_name,0xFFFFFF);
+    return registerLiquidMetal(metal_name,temperature,luminosity,"molten." + metal_name,0xFFFFFF);
   }
 
   /**
@@ -45,7 +45,7 @@ public class LiquidMetalRegistry implements IFluidRegistry
    */
   public FluidLiquidMetal registerLiquidMetal(String metal_name,int temperature,int luminosity,String texture,int color)
   {
-    FluidLiquidMetal fluid = new FluidLiquidMetal("liquid" + metal_name,
+    FluidLiquidMetal fluid = new FluidLiquidMetal("molten." + metal_name,
         new ResourceLocation("foundry","blocks/" + texture + "_still"),
         new ResourceLocation("foundry","blocks/" + texture + "_flow"),
         color, false, temperature,luminosity);
@@ -58,7 +58,7 @@ public class LiquidMetalRegistry implements IFluidRegistry
       solid = block_name;
     }
 
-    Block liquid_block = new BlockLiquidMetal(fluid, "liquid" + metal_name, solid);
+    Block liquid_block = new BlockLiquidMetal(fluid, "molten." + metal_name, solid);
     FoundryBlocks.register(liquid_block);
 
     fluid.setBlock(liquid_block);
@@ -69,18 +69,18 @@ public class LiquidMetalRegistry implements IFluidRegistry
 
   public FluidLiquidMetal registerSpecialLiquidMetal(String metal_name,int temperature,int luminosity, ItemStack solid)
   {
-    return registerSpecialLiquidMetal(metal_name,temperature,luminosity,"liquid" + metal_name,0xFFFFFF, solid);
+    return registerSpecialLiquidMetal(metal_name,temperature,luminosity,"molten." + metal_name,0xFFFFFF, solid);
   }
 
   public FluidLiquidMetal registerSpecialLiquidMetal(String metal_name,int temperature,int luminosity,String texture,int color, ItemStack solid)
   {
-    FluidLiquidMetal fluid = new FluidLiquidMetal("liquid" + metal_name,
+    FluidLiquidMetal fluid = new FluidLiquidMetal("molten." + metal_name,
         new ResourceLocation("foundry","blocks/" + texture + "_still"),
         new ResourceLocation("foundry","blocks/" + texture + "_flow"),
         color, true, temperature, luminosity);
     FluidRegistry.registerFluid(fluid);
 
-    Block liquid_block = new BlockLiquidMetal(fluid, "liquid" + metal_name, solid);
+    Block liquid_block = new BlockLiquidMetal(fluid, "molten." + metal_name, solid);
     FoundryBlocks.register(liquid_block);
 
     fluid.setBlock(liquid_block);
